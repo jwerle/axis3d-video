@@ -1,0 +1,41 @@
+{
+  "name": "axis3d-video",
+  "version": "1.0.0",
+  "description": "Stream a video using HLS, DASH, or progressive download to an Axis3D texture",
+  "main": "index.js",
+  "scripts": {
+    "test": ":"
+  },
+  "keywords": [
+    "axis3d",
+    "hls",
+    "dash",
+    "video",
+    "texture",
+    "surface"
+  ],
+  "browserify": {
+    "transform": [
+      "glslify"
+    ]
+  },
+  "author": "Joseph Werle <joseph.werle@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "axis3d": "^0.4.1",
+    "axis3d-geometry": "^1.0.3",
+    "budo": "^10.0.4",
+    "gl-vec3": "^1.0.3",
+    "glslify": "^6.1.0"
+  },
+  "peerDependencies": {
+    "axis3d": "^0.x.x"
+  },
+  "dependencies": {
+    "babelify": "^7.3.0",
+    "domready": "^1.0.8",
+    "hls.js": "^0.7.11",
+    "iphone-inline-video": "^2.2.2",
+    "shaka-player": "^2.1.7"
+  }
+}
