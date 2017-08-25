@@ -12,7 +12,7 @@ class VideoMaterial extends Component {
     return Object.assign(Material.defaults(), {
       defaultColor: [0.2, 0.3, 0.4],
       precision: 'highp float',
-      texture: { uniformName: 'video' }
+      texture: { uniformName: 'video', format: 'rgb' }
     })
   }
 

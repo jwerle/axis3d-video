@@ -57,7 +57,7 @@ ctx.on('error', (err) => console.error(err.stack || err))
 // configure video DOM element
 window.video = domElement
 Object.assign(domElement, {
-  src: '/assets/AR_BALLS_1_512kb.mp4',
+  src: '/assets/big-buck-bunny.mp4',
   loop: true,
   muted: true,
   preload: 'metadata',
@@ -102,7 +102,7 @@ const scale = [0, 0, 0]
 // this is the actual scene that gets rendererd. Fragment shaders
 // are compiled, cached, and used when appropriate based on
 // texture state. this is handled in VideoMaterial
-function scene() {
+function scene({time}) {
   // we position the camera just a bit back along the z-axis
   camera({position: [0, 0, 1]}, () => {
 
@@ -116,7 +116,7 @@ function scene() {
       // to draw. It will then switch to the appropriate shader
       // if true. If there isn't texture data, then it will draw
       // a blue surface, otherwise the current video frame
-      material({color: [0, 1, 0]}, ({fragmentShader}) => {
+      material({color: [0, 1, 0]}, () => {
 
         // this is the default scale of our surface mesh
         // we leverage the texture resolution to determine the

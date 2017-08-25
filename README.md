@@ -25,12 +25,17 @@ $ npm install axis3d axis3d-video
 
 The following media appears in the examples created in this repository.
 
-### AR Balls 1
+### Big Buck Bunny
 
 ```
-Copyright (c) The relevant members of Analog Recycling VJ Collective.
-Erik Schermer, Bas Icke and Gary Berendsen.
-All rights reserved.
+(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org
+```
+
+```
+ License URL
+----------------------------------------------
+ animation |   http://creativecommons.org/licenses/by/3.0/
+ artwork   |   http://creativecommons.org/licenses/by/3.0/
 ```
 
 ## License

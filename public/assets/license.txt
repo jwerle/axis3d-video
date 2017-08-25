@@ -1,0 +1,4 @@
+ License URL
+----------------------------------------------
+ animation |   http://creativecommons.org/licenses/by/3.0/
+ artwork   |   http://creativecommons.org/licenses/by/3.0/
