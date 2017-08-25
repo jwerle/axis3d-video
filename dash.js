@@ -65,7 +65,6 @@ class DASHVideoTexture extends Component {
       if (player && !entry.player) {
         player.load(src)
         currentSrc = src
-        console.log(Object.assign({}, initialState.dash, state.dash));
         player.configure(Object.assign({}, initialState.dash, state.dash))
         Object.assign(entry, {player, domElement, src})
       }

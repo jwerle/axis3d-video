@@ -39,7 +39,7 @@ class HLSVideoTexture extends Component {
       const entry = cache[src] = cache[src] || {}
       const player = entry.player
         ? entry.player
-        : createPlayer(Object.assign({domElement}, state.hls))
+        : createPlayer(Object.assign({domElement, src}, state.hls))
 
       if (!entry.player) {
         player.loadSource(src)
@@ -51,7 +51,7 @@ class HLSVideoTexture extends Component {
       next()
     }
 
-    function createPlayer({domElement, config}) {
+    function createPlayer({domElement, src, config}) {
       const player = new HLS(config)
       player.attachMedia(domElement)
       player.on(HLS.Events.ERROR, (event, data) => {
@@ -67,8 +67,10 @@ class HLSVideoTexture extends Component {
               player.recoverMediaError()
               break
             default:
+              ctx.emit('error', event, data)
               // cannot recover
               hls.destroy()
+              delete cache[src]
               break
           }
         }
